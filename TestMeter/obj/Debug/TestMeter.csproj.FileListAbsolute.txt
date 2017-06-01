@@ -1,0 +1,17 @@
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\bin\Debug\TestMeter.exe.config
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\bin\Debug\TestMeter.exe
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\bin\Debug\TestMeter.pdb
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\bin\Debug\DllMeter.dll
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\bin\Debug\DllMeter.pdb
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\obj\Debug\TestMeter.csprojResolveAssemblyReference.cache
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\obj\Debug\MainWindow.g.cs
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\obj\Debug\App.g.cs
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\obj\Debug\TestMeter_MarkupCompile.cache
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\obj\Debug\TestMeter_MarkupCompile.lref
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\obj\Debug\MainWindow.baml
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\obj\Debug\TestMeter.g.resources
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\obj\Debug\TestMeter.Properties.Resources.resources
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\obj\Debug\TestMeter.csproj.GenerateResource.Cache
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\obj\Debug\TestMeter.exe
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\obj\Debug\TestMeter.pdb
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\WPF\DllMeter\TestMeter\obj\Debug\Dictionary1.baml

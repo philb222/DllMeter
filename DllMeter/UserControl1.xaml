@@ -1,0 +1,110 @@
+﻿<ButtonBase x:Class="DllMeter.SmartMeter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:helper="clr-namespace:DllMeter.Helpers"
+             xmlns:local="clr-namespace:DllMeter"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             Height="126" Width="210">
+
+	<ButtonBase.Resources>
+        <ResourceDictionary Source="Dictionary1.xaml"/>
+    </ButtonBase.Resources>
+
+    <Grid x:Name="MainGrid" Width="210" Height="126" Background="Transparent" Cursor="Hand" MouseLeftButtonDown="MainGrid_LeftMouseDown">
+        <helper:PieSlice x:Name="MeterFace" Center="105, 95" Radius="85" StartAngle="-90" Fill="Gray" SweepAngle="180"/>
+        <helper:PieSlice x:Name="ThresholdSlice" Center="105, 95" Radius="85" StartAngle="60" Fill="Red" SweepAngle="0" Opacity=".4"/>
+
+        <Path x:Name="MeterFrame" Stroke="{StaticResource MeterFrameBrush}" StrokeThickness="10">
+            <Path.Data>
+                <CombinedGeometry GeometryCombineMode="Exclude">
+                    <CombinedGeometry.Geometry1>
+                        <EllipseGeometry Center="105,95" RadiusX="85" RadiusY="85" />
+                    </CombinedGeometry.Geometry1>
+                    <CombinedGeometry.Geometry2>
+                        <RectangleGeometry Rect="20,95,200,190"/>
+                    </CombinedGeometry.Geometry2>
+                </CombinedGeometry>
+            </Path.Data>
+        </Path>
+        <!-- Draw the numbers around the dial -->
+        <Label x:Name="labMinimum" Style="{StaticResource MeterNumbers}" Content="0" >
+            <Label.RenderTransform>
+                <RotateTransform CenterX="5" CenterY="55" Angle="-60"/>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="labMiddle" Style="{StaticResource MeterNumbers}" Content="50" Margin="0 -20 0 0">
+            <Label.RenderTransform>
+                <RotateTransform CenterX="5" CenterY="55" Angle="0"/>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="labMaximum" Style="{StaticResource MeterNumbers}" Content="100" Margin="10 0 0 0">
+            <Label.RenderTransform>
+                <RotateTransform CenterX="35" CenterY="55" Angle="60"/>
+            </Label.RenderTransform>
+        </Label>
+        <!-- Draw the hash marks on the dial -->
+        <Line x:Name="HashMark1" Stroke="Black" X1="105" Y1="34" X2="105" Y2="20" >
+            <Line.RenderTransform>
+                <RotateTransform CenterX="105" CenterY="95" Angle="-60" />
+            </Line.RenderTransform>
+        </Line>
+        <Line x:Name="HashMark2" Stroke="Black" X1="105" Y1="34" X2="105" Y2="20" >
+            <Line.RenderTransform>
+                <RotateTransform CenterX="105" CenterY="95" Angle="-45" />
+            </Line.RenderTransform>
+        </Line>
+        <Line x:Name="HashMark3" Stroke="Black" X1="105" Y1="34" X2="105" Y2="20" >
+            <Line.RenderTransform>
+                <RotateTransform CenterX="105" CenterY="95" Angle="-30" />
+            </Line.RenderTransform>
+        </Line>
+        <Line x:Name="HashMark4" Stroke="Black" X1="105" Y1="34" X2="105" Y2="20" >
+            <Line.RenderTransform>
+                <RotateTransform CenterX="105" CenterY="95" Angle="-15" />
+            </Line.RenderTransform>
+        </Line>
+        <Line x:Name="HashMark5" Stroke="Black" X1="105" Y1="46" X2="105" Y2="20" >
+        </Line>
+        <Line x:Name="HashMark6" Stroke="Black" X1="105" Y1="34" X2="105" Y2="20" >
+            <Line.RenderTransform>
+                <RotateTransform CenterX="105" CenterY="95" Angle="15" />
+            </Line.RenderTransform>
+        </Line>
+        <Line x:Name="HashMark7" Stroke="Black" X1="105" Y1="34" X2="105" Y2="20" >
+            <Line.RenderTransform>
+                <RotateTransform CenterX="105" CenterY="95" Angle="30" />
+            </Line.RenderTransform>
+        </Line>
+        <Line x:Name="HashMark8" Stroke="Black" X1="105" Y1="34" X2="105" Y2="20" >
+            <Line.RenderTransform>
+                <RotateTransform CenterX="105" CenterY="95" Angle="45" />
+            </Line.RenderTransform>
+        </Line>
+        <Line x:Name="HashMark9" Stroke="Black" X1="105" Y1="34" X2="105" Y2="20" >
+            <Line.RenderTransform>
+                <RotateTransform CenterX="105" CenterY="95" Angle="60" />
+            </Line.RenderTransform>
+        </Line>
+        <!-- Draw the dial's pointer, base, then label -->
+        <Polygon x:Name="MeterPointer" Points="102,100 104,30 106,30 108,100" Fill="Yellow" >
+            <Polygon.RenderTransform>
+                <RotateTransform CenterX="105" CenterY="95" Angle="-60"/>
+            </Polygon.RenderTransform>
+        </Polygon>
+        <Label x:Name="labReading" Style="{StaticResource LabelReading}" Content="0.0">
+        </Label>
+        <Label x:Name="labDescription" Style="{StaticResource DescriptionLabel}" />
+
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem x:Name="mnuAlarmColor" Header="Remove Alarm Color" Click="mnuAlarmColor_Click"/>
+            </ContextMenu>
+        </Grid.ContextMenu>
+    </Grid>
+	<ButtonBase.RenderTransform>
+        <ScaleTransform x:Name="ScaleMeter" ScaleX="1.0" ScaleY="1.0"/>
+    </ButtonBase.RenderTransform>
+</ButtonBase>
